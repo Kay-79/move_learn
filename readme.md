@@ -1,0 +1,1 @@
+$env:MOVE_HOME = "D:\Workspace\.move_cache"
