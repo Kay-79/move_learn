@@ -1,1 +1,5 @@
-$env:MOVE_HOME = "D:\Workspace\.move_cache"
+packageID   0x5b3686fa161b7524fd41d75c1c09c5590a65d82a177d41ddb727e7a99a189c3d
+
+counterID   0x3a148db3dd3925bf3a0804ceefc77021c13c8c285d9ef99020be32310d818ff0
+
+adminID     0x89db18aeb902d0bdf1422d8e318a905950672bd2a3ed5442719062b510252666
