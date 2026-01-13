@@ -5,24 +5,21 @@ public struct Counter has key {
     value: u64,
 }
 
-public struct Admin has key {
-    id: UID,
-}
-
 public fun create(ctx: &mut TxContext) {
-    let counter = Counter {
+    let counter_public = Counter {
         id: object::new(ctx),
         value: 0,
     };
-    let admin = Admin {
+    let counter_private = Counter {
         id: object::new(ctx),
+        value: 0,
     };
 
-    transfer::share_object(counter);
-    transfer::transfer(admin, tx_context::sender(ctx));
+    transfer::share_object(counter_public);
+    transfer::transfer(counter_private, tx_context::sender(ctx));
 }
 
-public fun increment(_cap: &Admin, counter: &mut Counter) {
+public fun increment(counter: &mut Counter) {
     counter.value = counter.value + 1;
 }
 
